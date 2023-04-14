@@ -10,7 +10,7 @@ import torchvision
 import torch.nn.utils.spectral_norm as spectral_norm
 from models.networks.normalization import SPADE, ACE, GROUP_SPADE
 from urllib.parse import urlparse
-from torch.hub import _download_url_to_file
+from torch.hub import download_url_to_file
 import torchvision.models as models
 import re
 import os
