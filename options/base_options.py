@@ -31,8 +31,8 @@ class BaseOptions():
         parser.add_argument('--no_flip', action='store_true', help='if specified, do not flip the images for data argumentation')
 
         parser.add_argument('--dataroot', type=str, default='E:/samsung/datasets/GEN/vip') # LandscapeHD | vip | camera_lidar_semantic
-        parser.add_argument('--pretrained_dir', type=str, default='E:/samsung/pretrained/unicorn/pretrained_weights/')
-        parser.add_argument('--checkpoints_dir', type=str, default='E:/samsung/modelsets/unicorn/save_weights', help='models are saved here')
+        parser.add_argument('--pretrained_dir', type=str, default='/home/louming/data/all_data/pretrained/unicorn/pretrained_weights/')
+        parser.add_argument('--checkpoints_dir', type=str, default='/home/louming/data/all_data/unicorn/save_weights', help='models are saved here')
         parser.add_argument('--dataset_mode', type=str, default='vip') # vip | landscape | traffic
 
         # networks
