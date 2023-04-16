@@ -3,7 +3,7 @@ Copyright (C) 2019 NVIDIA Corporation.  All rights reserved.
 Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 """
 
-from models.networks.sync_batchnorm import DataParallelWithCallback
+# from models.networks.sync_batchnorm import DataParallelWithCallback
 from models.pix2pix_model import Pix2PixModel
 
 
@@ -18,7 +18,8 @@ class Pix2PixTrainer():
         self.opt = opt
         self.pix2pix_model = Pix2PixModel(opt)
         if len(opt.gpu_ids) > 0:
-            self.pix2pix_model = DataParallelWithCallback(self.pix2pix_model, device_ids=opt.gpu_ids)
+            # if len(opt.gpu_ids) > 1:
+            #     self.pix2pix_model = DataParallelWithCallback(self.pix2pix_model, device_ids=opt.gpu_ids)
             self.pix2pix_model_on_one_gpu = self.pix2pix_model.module
         else:
             self.pix2pix_model_on_one_gpu = self.pix2pix_model
